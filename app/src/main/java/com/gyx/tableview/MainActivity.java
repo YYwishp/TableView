@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-		tableView.setProgressWidthAndRightText(100,190,"你好你好");
+		tableView.setProgressWidthAndRightText(100,190,"你好你好",-1);
 		root.addView(tableView);
 
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
 		TableView tableView_2 = new TableView(this);
 
 		tableView_2.setTableRootWidthHeight(MATCH_PARENT,150);
-		tableView_2.setProgressWidthAndRightText(90,190,"你好你好");
+		tableView_2.setProgressWidthAndRightText(90,190,"你好你好",-1);
 		root.addView(tableView_2);
 
 
