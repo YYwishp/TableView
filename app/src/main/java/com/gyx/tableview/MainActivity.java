@@ -1,19 +1,24 @@
 package com.gyx.tableview;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,23 +26,58 @@ public class MainActivity extends AppCompatActivity {
 
 	private RecyclerView recycler;
 	private ArrayList<String> stringArrayList;
+	private LinearLayout root;
+
+	private TableView tableView;
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		recycler = (RecyclerView) findViewById(R.id.recycler);
-		stringArrayList = new ArrayList<>();
+//		recycler = (RecyclerView) findViewById(R.id.recycler);
+//		stringArrayList = new ArrayList<>();
+//
+//
+//
+//		for (int i = 0; i < 17; i++) {
+//			stringArrayList.add("第" + i + "个");
+//		}
+//
+//		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+//		recycler.setLayoutManager(linearLayoutManager);
+//		recycler.setAdapter(new MyAdapter(stringArrayList,this));
 
 
 
-		for (int i = 0; i < 17; i++) {
-			stringArrayList.add("第" + i + "个");
-		}
 
-		LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-		recycler.setLayoutManager(linearLayoutManager);
-		recycler.setAdapter(new MyAdapter(stringArrayList,this));
+
+//		tableView = (TableView) findViewById(R.id.table_view);
+//		tableView.setProgressWidthAndRightText(150,"sssssss");
+
+
+
+
+
+		root = (LinearLayout) findViewById(R.id.root);
+
+		TableView tableView = new TableView(this);
+		tableView.setTableRootWidthHeight(MATCH_PARENT,150);
+
+
+
+		tableView.setProgressWidthAndRightText(100,190,"你好你好");
+		root.addView(tableView);
+
+
+
+
+
+
+		TableView tableView_2 = new TableView(this);
+
+		tableView_2.setTableRootWidthHeight(MATCH_PARENT,150);
+		tableView_2.setProgressWidthAndRightText(90,190,"你好你好");
+		root.addView(tableView_2);
 
 
 	}

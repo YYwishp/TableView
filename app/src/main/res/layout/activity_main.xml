@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
+    android:id="@+id/root"
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    xmlns:gyx="http://schemas.android.com/apk/res-auto"
+
     tools:context=".MainActivity">
 
-  <android.support.v7.widget.RecyclerView
-      android:id="@+id/recycler"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:id="@+id/recycler"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:visibility="gone">-->
+    <!--</android.support.v7.widget.RecyclerView>-->
 
 
 
 
 
 
+    <!--<com.gyx.tableview.TableView-->
+        <!--android:id="@+id/table_view"-->
+        <!--android:layout_width="350dp"-->
+        <!--android:layout_height="80dp"-->
+
+
+        <!--gyx:table_progress_background_drawable="@drawable/shape_bg_del_gray_rectangle"-->
+
+        <!--gyx:table_middle_width="20dp"-->
+        <!--gyx:table_progress_height="70dp"-->
+        <!--&gt;-->
 
 
 
-  </android.support.v7.widget.RecyclerView>
-</android.support.constraint.ConstraintLayout>
+
+
+    <!--</com.gyx.tableview.TableView>-->
+</LinearLayout>
